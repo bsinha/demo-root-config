@@ -1,7 +1,7 @@
 {
   "name": "@bipsin/root-config",
   "scripts": {
-    "start" : "node server.js",
+    "start": "node server.js",
     "start:dev": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
@@ -39,6 +39,7 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
+    "cors": "^2.8.5",
     "single-spa": "^5.9.3"
   }
 }
