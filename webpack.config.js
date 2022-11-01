@@ -25,6 +25,7 @@ module.exports = (webpackConfigEnv, argv) => {
       }),
     ],
     devServer: {
+      allowedHosts: 'all',
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
