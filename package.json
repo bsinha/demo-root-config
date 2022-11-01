@@ -1,7 +1,8 @@
 {
   "name": "@bipsin/root-config",
   "scripts": {
-    "start": "webpack serve --port 9000 --env isLocal",
+    "start" : "node server.js",
+    "start:dev": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
