@@ -10,9 +10,9 @@ export function nav() {
 }
 
 export function page1(location) {
-  return prefix(location, 'page1');
+  return prefix(location, "page1");
 }
 
 export function page2(location) {
-  return prefix(location, 'page2');
+  return prefix(location, "page2");
 }

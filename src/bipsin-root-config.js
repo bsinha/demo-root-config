@@ -1,5 +1,5 @@
-import { registerApplication, start } from 'single-spa';
-import * as isActive from './activity-functions';
+import { registerApplication, start } from "single-spa";
+import * as isActive from "./activity-functions";
 
 // registerApplication({
 //   name: '@single-spa/welcome',
@@ -17,20 +17,20 @@ import * as isActive from './activity-functions';
 // });
 
 registerApplication(
-  '@bipsin/demo-nav',
-  () => System.import('@bipsin/demo-nav'),
+  "@bipsin/demo-nav",
+  () => System.import("@bipsin/demo-nav"),
   isActive.nav
 );
 
 registerApplication(
-  '@bipsin/demo-page1',
-  () => System.import('@bipsin/demo-page1'),
+  "@bipsin/demo-page1",
+  () => System.import("@bipsin/demo-page1"),
   isActive.page1
 );
 
 registerApplication(
-  '@bipsin/demo-page2',
-  () => System.import('@bipsin/demo-page2'),
+  "@bipsin/demo-page2",
+  () => System.import("@bipsin/demo-page2"),
   isActive.page2
 );
 
