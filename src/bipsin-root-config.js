@@ -34,6 +34,4 @@ registerApplication(
   isActive.page2
 );
 
-start({
-  urlRerouteOnly: true,
-});
+start({});

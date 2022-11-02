@@ -9,16 +9,5 @@
       }
     ]
   ],
-  "env": {
-    "test": {
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            "targets": "current node"
-          }
-        ]
-      ]
-    }
-  }
+  
 }

@@ -9,7 +9,10 @@
     "check-format": "prettier --check .",
     "prepare": "husky install",
     "build": "concurrently npm:build:*",
-    "build:webpack": "webpack --mode=production"
+    "build:webpack": "webpack --mode=production",
+    "build:webpack:dev": "webpack --mode development",
+    "start:webpack": "webpack-dev-server --open --mode development",
+    "start:webpack:live": "webpack-dev-server --open --mode development --liveReload"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
