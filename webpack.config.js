@@ -16,16 +16,16 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    // output: {
-    //   publicPath:
-    //     argv.mode === "development"
-    //       ? "http://localhost:8080/"
-    //       : "https://demo-root-config.netlify.app/",
-    // // },
+    output: {
+      publicPath:
+        argv.mode === "development"
+          ? "http://localhost:8080/"
+          : "https://demo-root-config.netlify.app/",
+    },
   
-    // resolve: {
-    //   extensions: [".jsx", ".js", ".json"],
-    // },
+    resolve: {
+      extensions: [".jsx", ".js", ".json"],
+    },
   
     devServer: {
       port: 8080,
@@ -44,15 +44,15 @@ module.exports = (webpackConfigEnv, argv) => {
     //   filename: "[name].js",
     // },
     plugins: [
-      // new ModuleFederationPlugin({
-      //   name: "header",
-      //   filename: "remoteEntry.js",
-      //   remotes: {},
-      //   exposes: {
-      //   //  "./Header": "./src/Header",
-      //   },
-      //   shared: require("./package.json").dependencies,
-      // }),
+      new ModuleFederationPlugin({
+        name: "@bipsin/root-config",
+        filename: "remoteEntry.js",
+        remotes: {},
+        exposes: {
+        //  "./Header": "./src/Header",
+        },
+        shared: require("./package.json").dependencies,
+      }),
       new HtmlWebpackPlugin({
         inject: false,
         template: "src/index.ejs",
