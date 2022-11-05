@@ -54,5 +54,6 @@ workflows:
           requires:
             - node/test
       - deploy:
+          context: singlespa-demo-context
           requires:
             - build
