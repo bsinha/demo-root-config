@@ -31,14 +31,14 @@ jobs:
       image: ubuntu-2004:current
       docker_layer_caching: true
     steps:
-       - aws-s3/copy:
-          from: .
-          to: s3://singlespa-demo
-          arguments: --recursive
-      #  - attach_workspace:
-      #      at: .
-      #  - checkout
-      #  - run: aws s3 sync dist s3://singlespa-demo
+      #  - aws-s3/copy:
+      #     from: .
+      #     to: s3://singlespa-demo
+      #     arguments: --recursive
+       - attach_workspace:
+           at: .
+       - checkout
+       - run: aws s3 sync dist s3://singlespa-demo
              
 
 # Invoke jobs via workflows
