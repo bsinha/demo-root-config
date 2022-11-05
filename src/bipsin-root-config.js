@@ -19,19 +19,22 @@ import * as isActive from "./activity-functions";
 registerApplication(
   "@bipsin/demo-nav",
   () => System.import("@bipsin/demo-nav"),
-  isActive.nav
+  isActive.nav,
+  { domElement: document.getElementById("nav-container") }
 );
 
 registerApplication(
   "@bipsin/demo-page1",
   () => System.import("@bipsin/demo-page1"),
-  isActive.page1
+  isActive.page1,
+  { domElement: document.getElementById("nav-page1") }
 );
 
 registerApplication(
   "@bipsin/demo-page2",
   () => System.import("@bipsin/demo-page2"),
-  isActive.page2
+  isActive.page2,
+  { domElement: document.getElementById("nav-page2") }
 );
 
 start({});

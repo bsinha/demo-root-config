@@ -35,11 +35,10 @@ jobs:
       #     from: .
       #     to: s3://singlespa-demo
       #     arguments: --recursive
-       - attach_workspace:
-           at: .
-       - checkout
-       - run: aws s3 sync dist s3://singlespa-demo/demo-root-config
-             
+      - attach_workspace:
+          at: .
+      - checkout
+      - run: aws s3 sync dist s3://singlespa-demo/demo-root-config
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
