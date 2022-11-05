@@ -16,12 +16,12 @@ import * as isActive from "./activity-functions";
 //   activeWhen: ["/"]
 // });
 
-registerApplication(
-  "@bipsin/demo-nav",
-  () => System.import("@bipsin/demo-nav"),
-  isActive.nav,
-  { domElement: document.getElementById("nav-container") }
-);
+// registerApplication(
+//   "@bipsin/demo-nav",
+//   () => System.import("@bipsin/demo-nav"),
+//   isActive.nav,
+//   { domElement: document.getElementById("nav-container") }
+// );
 
 registerApplication(
   "@bipsin/demo-page1",
