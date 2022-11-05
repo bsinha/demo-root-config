@@ -32,7 +32,7 @@ jobs:
       docker_layer_caching: true
     steps:
        - aws-s3/copy:
-          from: dist/
+          from: .
           to: s3://singlespa-demo
           arguments: --recursive
       #  - attach_workspace:
