@@ -38,7 +38,7 @@ jobs:
        - attach_workspace:
            at: .
        - checkout
-       - run: aws s3 sync dist s3://singlespa-demo
+       - run: aws s3 sync dist s3://singlespa-demo/demo-root-config
              
 
 # Invoke jobs via workflows
